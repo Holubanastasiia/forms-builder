@@ -10,10 +10,12 @@
         <input type="text" name="text" id="text" placeholder="{{ place.placeholder }}">
     </div>
     <button (click)='onChange()'>Change</button>
+    <button class="close" (click)='removeBtn()'>&times;</button>
     <div class="text">
         <label for="text">enter border style</label><br />
-        <input type="text" name="text" id="text">
+        <input type="text" name="text" id="text" #inputTitle>
     </div>
+    <button (click)="onFocus()">Focus</button>
     <div class="text">
         <label for="text">enter width</label><br />
         <input type="text" name="text" id="text">
@@ -40,4 +42,6 @@
         <label for="text">enter color input RGB</label><br />
         <input type="text" name="text" id="text">
     </div>
+
+    <!-- <button>change element</button> -->
 </form>

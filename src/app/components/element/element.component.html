@@ -1,6 +1,5 @@
 <h3 class="elements">Element section</h3>
 <form action="">
-
     <div cdkDrag>
         <textarea name="text" id="textarea" cdkDrag></textarea>
     </div>
@@ -26,15 +25,15 @@
             <input type="checkbox" name="check" id="check">
         </label>
     </div>
+    <div cdkDrag>
+        <button mat-raised-button cdkDrag (click)='backgroundToggle = !backgroundToggle'>
+            button
+        </button>
+    </div>
+    <div [ngStyle]="{
+        width: '200px',
+        height: '200px',
+        border: '1px solid #ccc',
+        background: backgroundToggle ? 'red' : 'blue'
+    }"></div>
 </form>
-<div cdkDrag>
-    <button mat-raised-button cdkDrag (click)='backgroundToggle = !backgroundToggle'>
-        button
-    </button>
-</div>
-<div [ngStyle]="{
-    width: '200px',
-    height: '200px',
-    border: '1px solid #ccc',
-    background: backgroundToggle ? 'red' : 'blue'
-}"></div>

@@ -4,11 +4,11 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ElementComponent } from './element/element.component';
-import { BuilderComponent } from './builder/builder.component';
+import { ElementComponent } from './components/element/element.component';
+import { BuilderComponent } from './components/builder/builder.component';
 import { PortalModule } from '@angular/cdk/portal';
-import { HeaderComponent } from './header/header.component';
-import { GenStylesSectionComponent } from './gen-styles-section/gen-styles-section.component';
+import { HeaderComponent } from './components/header/header.component';
+import { GenStylesSectionComponent } from './components/gen-styles-section/gen-styles-section.component';
 import { CommonModule } from '@angular/common';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatButtonModule } from '@angular/material/button';
@@ -19,6 +19,7 @@ import { StoreModule } from '@ngrx/store';
 import { reducers, metaReducers } from './reducers';
 import { Routes, RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { StyleDirective } from './directives/style.directive';
 
 const appRoutes: Routes = [
   { path: '', component: HeaderComponent },
@@ -32,6 +33,7 @@ const appRoutes: Routes = [
     BuilderComponent,
     HeaderComponent,
     GenStylesSectionComponent,
+    StyleDirective,
   ],
   imports: [
     BrowserModule,

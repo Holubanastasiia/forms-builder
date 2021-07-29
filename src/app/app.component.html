@@ -3,8 +3,8 @@
 <div class="main">
   <app-gen-styles-section *ngFor="let i of text" [place]="i" (onAdd)="apdateTitle($event)">
   </app-gen-styles-section>
-  <mat-divider [vertical]="true"></mat-divider>
-  <app-builder class="build"></app-builder>
+  <mat-divider [vertical]="true" (onRemove)="removeButton($event)"></mat-divider>
+  <app-builder class="build" appStyle='red' [dStyles]='{border:"1px solid yellow", borderRadius:"20px"}'></app-builder>
   <mat-divider [vertical]="true"></mat-divider>
   <app-element class="elem"></app-element>
 </div>

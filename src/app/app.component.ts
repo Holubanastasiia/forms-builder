@@ -4,6 +4,10 @@ export interface Text {
   placeholder: string;
 }
 
+export interface Title {
+  title: any;
+}
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -16,18 +20,23 @@ export class AppComponent {
     {
       placeholder: 'some',
     },
+    // {
+    //   placeholder: 'another',
+    // },
+  ];
+
+  change: Title[] = [
     {
-      placeholder: 'another',
+      title: 'changed',
     },
   ];
 
   apdateTitle(text: Text) {
+    this.text.unshift(text);
     console.log('title', text);
   }
-}
 
-/** @title Form field with prefix & suffix */
-
-export class FormFieldPrefixSuffixExample {
-  hide = true;
+  removeButton(title: any) {
+    console.log(title);
+  }
 }

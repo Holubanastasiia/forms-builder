@@ -10,6 +10,3 @@ export class ElementComponent implements OnInit {
 
   ngOnInit(): void {}
 }
-
-export class CdkDragDropOverviewExample {}
-export class FormFieldOverviewExample {}
