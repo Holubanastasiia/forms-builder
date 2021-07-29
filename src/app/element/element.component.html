@@ -1,0 +1,40 @@
+<h3 class="elements">Element section</h3>
+<form action="">
+
+    <div cdkDrag>
+        <textarea name="text" id="textarea" cdkDrag></textarea>
+    </div>
+    <div cdkDrag>
+        <input type="text" name="text" id="text" placeholder="some text">
+    </div>
+    <div cdkDrag>
+        <select cdkDrag>
+            <option value="select">
+                1
+            </option>
+            <option value="2">
+                2
+            </option>
+            <option value="3">
+                3
+            </option>
+        </select>
+    </div>
+    <div cdkDrag>
+        <label for="check">
+            label
+            <input type="checkbox" name="check" id="check">
+        </label>
+    </div>
+</form>
+<div cdkDrag>
+    <button mat-raised-button cdkDrag (click)='backgroundToggle = !backgroundToggle'>
+        button
+    </button>
+</div>
+<div [ngStyle]="{
+    width: '200px',
+    height: '200px',
+    border: '1px solid #ccc',
+    background: backgroundToggle ? 'red' : 'blue'
+}"></div>

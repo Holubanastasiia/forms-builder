@@ -1,0 +1,43 @@
+<h3>Form General Styling</h3>
+<form action="" id="form">
+    <div class="text">
+        <label for="text">enter placeholder text</label> <br />
+        <input (input)="onInput($event)" type="text" name="text" id="text">
+        <p><strong>{{ inputValue }}</strong></p>
+    </div>
+    <div class="text">
+        <label for="text">enter background</label><br />
+        <input type="text" name="text" id="text" placeholder="{{ place.placeholder }}">
+    </div>
+    <button (click)='onChange()'>Change</button>
+    <div class="text">
+        <label for="text">enter border style</label><br />
+        <input type="text" name="text" id="text">
+    </div>
+    <div class="text">
+        <label for="text">enter width</label><br />
+        <input type="text" name="text" id="text">
+    </div>
+    <div class="text">
+        <label for="text">enter height</label><br />
+        <input type="text" name="text" id="text">
+    </div>
+
+
+    <div class="text">
+        <label for="text">enter font size input</label><br />
+        <input type="text" name="text" id="text" [(ngModel)]="title">
+    </div>
+    <button (click)="addTitle()">Add placeholder</button>
+
+
+
+    <div class="text">
+        <label for="text">enter font weight Select</label><br />
+        <input type="text" name="text" id="text">
+    </div>
+    <div class="text">
+        <label for="text">enter color input RGB</label><br />
+        <input type="text" name="text" id="text">
+    </div>
+</form>
